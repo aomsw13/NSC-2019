@@ -25,26 +25,23 @@ export default class App extends react.Component {
       <View style={styles.container}>
           <Header
           leftComponent={{ icon: 'menu', color: '#fff' }}
-          centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+          centerComponent={{ text: 'MUTram Tracking', style: { color: '#fff' } }}
           rightComponent={{ icon: 'home', color: '#fff' }}
           />
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
+        {/* <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
 
         <View>
         <Text style={styles.name}>To you get started, edit App.js</Text>
         <AssertExample />
-        </View>
+        </View> */}
 
-        <View>
+        {/* <View>
            <Buttonbasic/>
-        </View>
+        </View> */}
 
         <View style={styles.container1}>
-        <MapView
-         style={styles.map}
-         />
          <Callouts/>
         </View>
 
@@ -64,12 +61,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#EEEC95',
   },
   container1: {
-    flex: 3,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'stretch',
     backgroundColor: '#EEEC95',
     width: width,
-    height: height
+    height: 500
     
   },
   map: {

@@ -1,7 +1,7 @@
 //expo start : to start develop
 import * as react from 'react';
 import React, { Component } from 'react';
-import {  ScrollView,Platform, StyleSheet, Text, View, Dimensions } from 'react-native';
+import {  Button,ScrollView,Platform, StyleSheet, Text, View, Dimensions } from 'react-native';
 import { Header } from 'react-native-elements';
 import MapView from 'react-native-maps';
 
@@ -19,15 +19,22 @@ const instructions = Platform.select({
 });
 
 export default class App extends react.Component {
+
+  _onPressButton() {
+    alert('You tapped the button!')
+  }
+
   render() {
     return (
       <ScrollView>
       <View style={styles.container}>
+         
           <Header
-          leftComponent={{ icon: 'menu', color: '#fff' }}
+          leftComponent={{ icon: 'menu', color: '#fff' }} 
           centerComponent={{ text: 'MUTram Tracking', style: { color: '#fff' } }}
           rightComponent={{ icon: 'home', color: '#fff' }}
           />
+          
         {/* <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
@@ -66,7 +73,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     backgroundColor: '#EEEC95',
     width: width,
-    height: 500
+    height: height-58
     
   },
   map: {
@@ -87,5 +94,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#04951E',
     marginBottom: 10,
+  },
+  buttonContainer: {
+    margin: 20
   }
 });
